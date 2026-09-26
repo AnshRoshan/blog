@@ -1,4 +1,4 @@
-# anshroshan-blog
+# blog
 
 Static blog for [anshroshan.com](https://anshroshan.com), built with Astro.
 
