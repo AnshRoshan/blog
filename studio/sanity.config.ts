@@ -7,6 +7,7 @@
  * post + rebuilding the blog site puts it live.
  */
 import { codeInput } from "@sanity/code-input";
+import { table } from "@sanity/table";
 import { visionTool } from "@sanity/vision";
 import { defineConfig } from "sanity";
 import { structureTool, type StructureResolver } from "sanity/structure";
@@ -49,6 +50,7 @@ export default defineConfig({
     plugins: [
         structureTool({ structure }),
         codeInput(),
+        table(),
         visionTool({ defaultApiVersion: apiVersion }),
     ],
 });

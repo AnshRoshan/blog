@@ -134,7 +134,18 @@ export const blockContentType = defineType({
             type: "object",
             title: "Divider",
             name: "divider",
-            fields: [],
+            // Sanity requires every object type to declare at least one
+            // field; the style slot is kept hidden so the editor stays one
+            // click while the type stays valid.
+            fields: [
+                {
+                    name: "style",
+                    type: "string",
+                    options: { list: ["thin", "thick"] },
+                    initialValue: { type: "string", value: "thin" },
+                    hidden: true,
+                },
+            ],
             preview: {
                 prepare: () => ({ title: "—" }),
             },
